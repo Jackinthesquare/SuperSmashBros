@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import Fighter from './components/Fighter';
+import FighterScreen from './components/FighterScreen';
+import { useState } from 'react'
 
 function App() {
+  const [visible, setVisible] = useState(false)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Fighters</h1>
+      <div className="fighters-grid">
+       <Fighter name={'Roy'} color={'red'} setVisible={setVisible} />
+       <Fighter name={'Fox'} color={'green'} />
+       <Fighter name={'Ganondorf'} color={'purple'} />
+       <Fighter name={'Sheik'} color={'lightskyblue'} />
+      </div>
+      <FighterScreen isVisible={visible} setVisible={setVisible} />
     </div>
   );
 }
