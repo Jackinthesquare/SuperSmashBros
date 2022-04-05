@@ -10,9 +10,9 @@ function App() {
       <h1>Fighters</h1>
       <div className="fighters-grid">
        <Fighter name={'Roy'} color={'red'} setVisible={setVisible} />
-       <Fighter name={'Fox'} color={'green'} />
-       <Fighter name={'Ganondorf'} color={'purple'} />
-       <Fighter name={'Sheik'} color={'lightskyblue'} />
+       <Fighter name={'Fox'} color={'green'} setVisible={setVisible} />
+       <Fighter name={'Ganondorf'} color={'purple'} setVisible={setVisible} />
+       <Fighter name={'Sheik'} color={'lightskyblue'} setVisible={setVisible} />
       </div>
       <FighterScreen isVisible={visible} setVisible={setVisible} />
     </div>
